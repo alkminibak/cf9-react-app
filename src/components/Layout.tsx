@@ -9,9 +9,6 @@ interface LayoutProps {
 const Layout = ({children, addClasses}: LayoutProps) => {
    return (
       <>
-         <Header/>
-         <main className="container mx-auto min-h-[95vh]">{children}</main>
-         <Footer/>
          <div className={addClasses}>
             <Header/>
             <main className="container mx-auto min-h-[95vh]">{children}</main>
