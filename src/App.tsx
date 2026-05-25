@@ -15,11 +15,13 @@
 // import PreviousValue from "./components/LessonSix/PreviousValue.tsx";
 // import {useEffect} from "react";
 import {Route, Routes} from "react-router";
-import NameChanger from "./components/LessonFive/NameChanger.tsx";
+// import NameChanger from "./components/LessonFive/NameChanger.tsx";
 import HomePage from "./pages/HomePage.tsx";
-import Counter from "./components/LessonFour/Counter.tsx";
-import CounterAdvanced from "./components/LessonFour/CounterAdvanced.tsx";
+// import Counter from "./components/LessonFour/Counter.tsx";
+// import CounterAdvanced from "./components/LessonFour/CounterAdvanced.tsx";
 import RouterLayout from "./components/RouterLayout.tsx";
+import UserPage from "./pages/UserPage.tsx";
+import SearchPage from "./pages/SearchPage.tsx";
 // import Counter from "./components/LessonFour/Counter.tsx";
 // import ClassCounter from "./components/LessonFour/ClassCounter.tsx";
 
@@ -142,19 +144,25 @@ function App() {
 
           <Route element={<RouterLayout />} >
              <Route index element={<HomePage />} />
-             <Route path="examples">
-                <Route index element={<NameChanger />} />
-                <Route path="name-changer" element={<NameChanger />} />
-                <Route path="counter" element={<Counter />} />
-                <Route path="counter-advanced" element={<CounterAdvanced />} />
+             {/*<Route path="examples">*/}
+             {/*   <Route index element={<NameChanger />} />*/}
+             {/*   <Route path="name-changer" element={<NameChanger />} />*/}
+             {/*   <Route path="counter" element={<Counter />} />*/}
+             {/*   <Route path="counter-advanced" element={<CounterAdvanced />} />*/}
+             {/*</Route>*/}
+
+
+             <Route path="users">
+                {/*<Route index element={<UserListPage />} />*/}
+                <Route path=":userId" element={<UserPage />} />
+                {/*   /users/15     Path Params   */}
+                {/*   /users?id=15  Query Params  */}
              </Route>
+
+             <Route path="search" element={<SearchPage />} />
+             {/*  search?query=react&page=3   Query Params  */}
+
           </Route>
-
-          {/*<Route path="users">*/}
-          {/*   <Route index element={<UserListPage />} />*/}
-          {/*   <Route path=":userId" element={<UserPage />} />*/}
-          {/*</Route>*/}
-
           {/* /files/* */}
           {/*<Route path="files/*" element={<File />} />*/}
           {/*let params = useParams();*/}
