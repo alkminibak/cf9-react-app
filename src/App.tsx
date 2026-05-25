@@ -23,6 +23,7 @@ import RouterLayout from "./components/RouterLayout.tsx";
 import UserPage from "./pages/UserPage.tsx";
 import SearchPage from "./pages/SearchPage.tsx";
 import MultiFieldForm from "./components/LessonNine/MultiFieldForm.tsx";
+import MultiFieldFormWithValidation from "./components/LessonNine/MultiFieldFormWithValidation.tsx";
 // import Counter from "./components/LessonFour/Counter.tsx";
 // import ClassCounter from "./components/LessonFour/ClassCounter.tsx";
 
@@ -164,6 +165,7 @@ function App() {
              {/*  search?query=react&page=3   Query Params  */}
 
              <Route path="multifield-form" element={<MultiFieldForm />} />
+             <Route path="multifield-form-validation" element={<MultiFieldFormWithValidation />} />
 
           </Route>
           {/* /files/* */}
