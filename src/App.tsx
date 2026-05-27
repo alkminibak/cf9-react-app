@@ -75,6 +75,9 @@ import MultiFieldFormWithHookForm from "./components/LessonTen/MultiFieldFormWit
 // useEffect(setup, [count])
 
 
+function ProductListPage() {
+   return null;
+}
 
 function App() {
 
@@ -170,6 +173,11 @@ function App() {
              <Route path="multifield-form-validation" element={<MultiFieldFormWithValidation />} />
              <Route path="multifield-form-zod" element={<MultiFieldFormWithZod />} />
              <Route path="multifield-form-hook-form" element={<MultiFieldFormWithHookForm />} />
+
+             <Route path="products">
+                <Route index element={<ProductListPage />} />
+                {/*<Route path=":productId" element={<ProductPage/>} />*/}
+             </Route>
 
           </Route>
           {/* /files/* */}
