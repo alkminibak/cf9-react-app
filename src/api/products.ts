@@ -5,7 +5,7 @@ const TENANT_ID = import.meta.env.VITE_TENANT_ID;
 
 export async function getProducts(): Promise<Product[]> {
 
-   const res = await fetch(`/${API_URL}/tenants/${TENANT_ID}/products/`)
+   const res = await fetch(`${API_URL}/tenants/${TENANT_ID}/products/`)
    // "/tenants/%203f357f95-b19a-4f48-86ff-d4224268cd0c/products/"
    if (!res.ok) throw new Error("Failed to fetch products");
    const data = await res.json();
@@ -14,7 +14,7 @@ export async function getProducts(): Promise<Product[]> {
 }
 
 export async function getProduct(id: number): Promise<Product> {
-   const res = await fetch(`/${API_URL}/tenants/${TENANT_ID}/products/${id}`);
+   const res = await fetch(`${API_URL}/tenants/${TENANT_ID}/products/${id}`);
    if (!res.ok) throw new Error("Failed to fetch product");
    return await res.json();
 }
@@ -22,7 +22,7 @@ export async function getProduct(id: number): Promise<Product> {
 export async function updateProduct(
    id: number,
    data: Product) {
-   const res = await fetch(`/${API_URL}/tenants/${TENANT_ID}/products/${id}`, {
+   const res = await fetch(`${API_URL}/tenants/${TENANT_ID}/products/${id}`, {
       method: "PUT",
       headers: {"Content-Type" : "application/json"},
       body: JSON.stringify(data),
@@ -32,7 +32,7 @@ export async function updateProduct(
 }
 
 export async function createProduct(data: ProductFormData): Promise<Product> {
-   const res = await fetch(`/${API_URL}/tenants/${TENANT_ID}/products/`, {
+   const res = await fetch(`${API_URL}/tenants/${TENANT_ID}/products/`, {
       method: "POST",
       headers: {"Content-Type" : "application/json"},
       body: JSON.stringify(data),
@@ -42,7 +42,7 @@ export async function createProduct(data: ProductFormData): Promise<Product> {
 }
 
 export async function deleteProduct(id: number): Promise<void> {
-   const res = await fetch(`/${API_URL}/tenants/${TENANT_ID}/products/${id}`, {
+   const res = await fetch(`${API_URL}/tenants/${TENANT_ID}/products/${id}`, {
       method: "DELETE",
    })
    if (!res.ok) throw new Error("Failed to delete product");
