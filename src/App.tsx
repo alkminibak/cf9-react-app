@@ -26,6 +26,7 @@ import MultiFieldForm from "./components/LessonNine/MultiFieldForm.tsx";
 import MultiFieldFormWithValidation from "./components/LessonNine/MultiFieldFormWithValidation.tsx";
 import MultiFieldFormWithZod from "./components/LessonTen/MultiFieldFormWithZod.tsx";
 import MultiFieldFormWithHookForm from "./components/LessonTen/MultiFieldFormWithHookForm.tsx";
+import ProductListPage from "./pages/ProductListPage.tsx";
 // import Counter from "./components/LessonFour/Counter.tsx";
 // import ClassCounter from "./components/LessonFour/ClassCounter.tsx";
 
@@ -73,11 +74,6 @@ import MultiFieldFormWithHookForm from "./components/LessonTen/MultiFieldFormWit
 // }
 //
 // useEffect(setup, [count])
-
-
-function ProductListPage() {
-   return null;
-}
 
 function App() {
 
