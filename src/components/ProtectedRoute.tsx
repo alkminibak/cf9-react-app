@@ -1,0 +1,14 @@
+import {Navigate, Outlet, useLocation} from "react-router";
+import {useAuth} from "@/constext/AuthProvider.tsx";
+
+const ProtectedRoute = () => {
+   const { isAuthenticated } = useAuth();
+   const location = useLocation();
+
+   if (!isAuthenticated) {
+      return <Navigate to="/login" state={{from: location}}/>;
+   }
+   return <Outlet/>
+}
+
+export default ProtectedRoute;
